@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Pagina Delete {% endblock %}
+
+{% block main %}
+
+    <h1>Certeza que deseja apagar {{ estudante.nome }}?</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Apagar</button>
+    </form>
+    <a href="{% url 'estudanteList' %}">Voltar</a>
+
+{% endblock %}

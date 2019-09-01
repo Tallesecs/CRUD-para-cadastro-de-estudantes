@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Bem vindo! {% endblock %}
+
+{% block main %}
+<h1>Bem vindo! Faça o seu login</h1>
+    {% if user.is_authenticated %}
+        <p>Ola {{ user.username }}</p>
+        <a href="{% url 'logout' %}">Sair</a>
+    {% else %}
+        <a href="{% url 'login' %}">Entrar</a>
+    {% endif %}
+
+{% endblock %}

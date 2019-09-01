@@ -1,0 +1,19 @@
+<!-- HTML HERDADO DO base.html para mostrar que consegui importar o css/bootstrap
+ pois a inteção era só mostrar que eu aprendi.-->
+
+{% extends 'base.html' %}
+
+{% block title %} Pagina de Login {% endblock %}
+
+{% block main %}
+
+<h2>Login</h2>
+<form method="post">
+        {% csrf_token %}
+        {{form.as_p }}
+<button type="submit" class="btn btn-info">Login</button>
+
+
+</form>
+
+{% endblock %}
